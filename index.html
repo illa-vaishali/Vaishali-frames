@@ -1,88 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Vaishali Frames</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <title>ILLA VAISHALI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background: #0b0b0b;
-      font-family: Arial, sans-serif;
-      color: #ffffff;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
+      background: linear-gradient(135deg, #120016, #1b0023);
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
     }
 
-    .container {
-      text-align: center;
-      max-width: 420px;
-      padding: 20px;
-    }
-
-    .container img {
+    .card {
       width: 100%;
-      border-radius: 16px;
-      margin-bottom: 22px;
+      max-width: 420px;
+      padding: 24px;
+      text-align: center;
+      background: rgba(255,255,255,0.06);
+      border-radius: 22px;
+      box-shadow: 0 0 45px rgba(255,105,180,0.25);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 18px;
+      margin-bottom: 20px;
     }
 
     h1 {
-      font-size: 30px;
-      letter-spacing: 3px;
       margin: 0;
+      font-size: 28px;
+      letter-spacing: 3px;
+      color: #ffb6dd;
     }
 
     .bio {
-      margin-top: 8px;
+      margin-top: 10px;
       font-size: 14px;
       letter-spacing: 2px;
-      color: #bfbfbf;
+      color: #ffd6eb;
     }
 
     .links {
-      margin-top: 28px;
+      margin-top: 30px;
       display: flex;
       flex-direction: column;
       gap: 14px;
     }
 
     .links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       text-decoration: none;
-      color: #ffffff;
-      border: 1px solid #333;
-      padding: 12px;
+      padding: 14px;
       border-radius: 30px;
       font-size: 15px;
-      transition: all 0.3s ease;
+      color: #fff;
+      background: linear-gradient(135deg, #ff4fa3, #c77dff);
+      transition: 0.3s ease;
     }
 
     .links a:hover {
-      background: #ffffff;
-      color: #000000;
+      transform: scale(1.05);
+      box-shadow: 0 0 18px rgba(255,79,163,0.6);
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
+  <div class="card">
 
-    <img src="profile.jpg" alt="Vaishali">
+    <!-- PROFILE IMAGE -->
+    <img src="profile.jpg" alt="Illa Vaishali">
 
+    <!-- NAME -->
     <h1>ILLA VAISHALI</h1>
 
+    <!-- BIO -->
     <div class="bio">
-      NATURE • SPIRITUALITY • SOULFUL FRAMES
+      NATURE · SPIRITUALITY · SOULFUL FRAMES
     </div>
 
+    <!-- SOCIAL LINKS -->
     <div class="links">
-      <a href="https://www.snapchat.com/@vaish_ali5224" target="_blank">Snapchat</a>
-      <a href="https://www.instagram.com/vaish__arts/" target="_blank">Instagram</a>
-      <a href="https://www.linkedin.com/in/illa-vaishali-051449397" target="_blank">LinkedIn</a>
-      <a href="https://youtube.com/@sacredframesbyvaishali" target="_blank">YouTube</a>
+      <a href="https://www.instagram.com/vaish__arts/" target="_blank">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+
+      <a href="https://www.snapchat.com/@vaish_ali5224" target="_blank">
+        <i class="fab fa-snapchat"></i> Snapchat
+      </a>
+
+      <a href="https://www.linkedin.com/in/illa-vaishali-051449397" target="_blank">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+
+      <a href="https://youtube.com/@sacredframesbyvaishali" target="_blank">
+        <i class="fab fa-youtube"></i> YouTube
+      </a>
     </div>
 
   </div>
