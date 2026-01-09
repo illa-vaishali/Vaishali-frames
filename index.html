@@ -1,133 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>ILLA VAISHALI</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vaishali — LinkedIn Growth & Personal Branding</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#0b0b0f;color:#eaeaf0;line-height:1.6}
+a{text-decoration:none;color:inherit}/* BACKGROUND */ .bg{position:fixed;inset:0;z-index:-1;background: radial-gradient(circle at 20% 20%,#2563eb22,transparent 40%), radial-gradient(circle at 80% 60%,#22c55e22,transparent 45%), linear-gradient(180deg,#0b0b0f,#050507)}
 
-  <!-- ICONS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+/* LAYOUT */ .container{max-width:1100px;margin:auto;padding:64px 20px}
 
-  <!-- FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+/* HERO */ .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center} .hero h1{font-size:clamp(2.4rem,5vw,3.6rem);font-weight:800;letter-spacing:-1px} .hero h1 span{color:#60a5fa} .hero p{margin-top:18px;color:#b8c0ff;max-width:520px} .hero .badge{display:inline-block;margin-bottom:14px;padding:8px 14px;border-radius:999px;background:#111827;border:1px solid #1f2937;font-size:.75rem;letter-spacing:.5px}
 
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #120016, #1b0023);
-      font-family: 'Poppins', sans-serif;
-      color: #fff;
-    }
-    .avatar {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 64px;
-  font-weight: 600;
-  color: white;
-  margin: 20px auto;
-  box-shadow: 0 0 25px rgba(255, 154, 158, 0.6);
-    }
+/* CTA */ .cta{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap} .btn{padding:14px 22px;border-radius:12px;font-weight:600;font-size:.9rem;transition:.25s} .btn.primary{background:#2563eb} .btn.primary:hover{background:#1d4ed8} .btn.ghost{border:1px solid #374151;color:#c7d2fe} .btn.ghost:hover{background:#111827}
 
-    .card {
-      width: 100%;
-      max-width: 420px;
-      padding: 24px;
-      text-align: center;
-      background: rgba(255,255,255,0.06);
-      border-radius: 22px;
-      box-shadow: 0 0 45px rgba(255,105,180,0.25);
-    }
+/* CARD */ .card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:26px;backdrop-filter:blur(16px)}
 
-    .card img {
-      width: 100%;
-      border-radius: 18px;
-      margin-bottom: 20px;
-    }
+/* SERVICES */ .services{margin-top:80px} .services h2{text-align:center;font-size:2rem;font-weight:700} .services p{text-align:center;color:#9ca3af;margin-top:10px} .service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:40px} .service i{font-size:1.8rem;color:#60a5fa;margin-bottom:14px} .service h3{font-size:1rem;font-weight:600;margin-bottom:8px} .service span{font-size:.85rem;color:#9ca3af}
 
-    h1 {
-      margin: 0;
-      font-size: 28px;
-      letter-spacing: 3px;
-      color: #ffb6dd;
-    }
+/* ABOUT */ .about{margin-top:90px;display:grid;grid-template-columns:1fr 1fr;gap:40px} .about h2{font-size:1.8rem;font-weight:700} .about p{color:#cbd5f5;margin-top:14px} .list{margin-top:18px} .list li{margin-bottom:10px;font-size:.9rem;color:#d1d5ff}
 
-    .bio {
-      margin-top: 10px;
-      font-size: 14px;
-      letter-spacing: 2px;
-      color: #ffd6eb;
-    }
+/* LINKS */ .links{margin-top:90px;text-align:center} .links h2{font-size:1.6rem;margin-bottom:22px} .link-bar{display:flex;justify-content:center;gap:18px;flex-wrap:wrap} .link{width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#111827;border:1px solid #1f2937;font-size:1.4rem;transition:.25s} .link:hover{transform:translateY(-4px);background:#1e293b}
 
-    .links {
-      margin-top: 30px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
+/* FOOTER */ footer{text-align:center;margin-top:80px;font-size:.75rem;color:#6b7280}
 
-    .links a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      text-decoration: none;
-      padding: 14px;
-      border-radius: 30px;
-      font-size: 15px;
-      color: #fff;
-      background: linear-gradient(135deg, #ff4fa3, #c77dff);
-      transition: 0.3s ease;
-    }
+@media(max-width:900px){ .hero,.about{grid-template-columns:1fr} } </style>
 
-    .links a:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 18px rgba(255,79,163,0.6);
-    }
-  </style>
 </head>
-
 <body>
-  <div class="card">
-
-    <!-- PROFILE IMAGE -->
-    <div class="avatar">V</div>
-
-    <!-- NAME -->
-    <h1>ILLA VAISHALI</h1>
-
-    <!-- BIO -->
-    <div class="bio">
-      NATURE · SPIRITUALITY · SOULFUL FRAMES
-    </div>
-
-    <!-- SOCIAL LINKS -->
-    <div class="links">
-      <a href="https://www.instagram.com/vaish__arts/" target="_blank">
-        <i class="fab fa-instagram"></i> Instagram
-      </a>
-
-      <a href="https://www.snapchat.com/@vaish_ali5224" target="_blank">
-        <i class="fab fa-snapchat"></i> Snapchat
-      </a>
-
-      <a href="https://www.linkedin.com/in/illa-vaishali-051449397" target="_blank">
-        <i class="fab fa-linkedin"></i> LinkedIn
-      </a>
-
-      <a href="https://youtube.com/@sacredframesbyvaishali" target="_blank">
-        <i class="fab fa-youtube"></i> YouTube
-      </a>
-    </div>
-
-  </div>
+<div class="bg"></div><div class="container"><!-- HERO --><section class="hero">
+<div>
+<div class="badge">LinkedIn Growth • Personal Branding • Freelancing</div>
+<h1>Hi, I'm <span>Vaishali</span><br> I turn LinkedIn into <span>income</span></h1>
+<p>I help students, freelancers, job‑seekers and creators grow on LinkedIn — by building strong personal brands, optimizing profiles and creating content that actually gets reach, leads and clients.</p>
+<div class="cta">
+<a class="btn primary" href="https://linkedin.com/in/illa-vaishali-051449397" target="_blank">Book via LinkedIn</a>
+<a class="btn ghost" href="#services">See My Services</a>
+</div>
+</div>
+<div class="card">
+<h3 style="margin-bottom:12px">What I Do</h3>
+<ul class="list">
+<li>✔ LinkedIn Profile Optimization (Headline, Banner, About)</li>
+<li>✔ Content Writing & Post Strategy</li>
+<li>✔ Organic Growth Systems (No Fake Motivation)</li>
+<li>✔ Monetization Guidance (Clients, Freelancing, Brand Deals)</li>
+</ul>
+</div>
+</section><!-- SERVICES --><section class="services" id="services">
+<h2>Services I Offer</h2>
+<p>Practical systems — not theory</p>
+<div class="service-grid">
+<div class="card service"><i class="fa-solid fa-pen-nib"></i><h3>Content Writing</h3><span>High‑retention posts that build authority</span></div>
+<div class="card service"><i class="fa-brands fa-linkedin"></i><h3>LinkedIn Optimization</h3><span>Profile revamp for reach & leads</span></div>
+<div class="card service"><i class="fa-solid fa-bullhorn"></i><h3>Personal Branding</h3><span>Clear positioning that attracts clients</span></div>
+<div class="card service"><i class="fa-solid fa-chart-line"></i><h3>Growth Strategy</h3><span>Organic systems that scale</span></div>
+</div>
+</section><!-- ABOUT --><section class="about">
+<div>
+<h2>Why Work With Me?</h2>
+<p>I don't sell motivation. I build systems. Everything I teach or implement is practical, tested and focused on outcomes — reach, credibility and income.</p>
+<ul class="list">
+<li>• Clear communication, no fluff</li>
+<li>• Strategy before aesthetics</li>
+<li>• Growth focused on monetization</li>
+</ul>
+</div>
+<div class="card">
+<h3>Who This Is For</h3>
+<ul class="list">
+<li>✔ Students starting from zero</li>
+<li>✔ Freelancers needing clients</li>
+<li>✔ Job‑seekers building authority</li>
+<li>✔ Creators scaling LinkedIn</li>
+</ul>
+</div>
+</section><!-- LINKS --><section class="links">
+<h2>Connect With Me</h2>
+<div class="link-bar">
+<a class="link" href="https://linkedin.com/in/illa-vaishali-051449397" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+<a class="link" href="https://instagram.com/vaish__arts" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+<a class="link" href="https://youtube.com/@vaishali_linkedingrowthtips" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+</div>
+</section><footer>© 2026 Vaishali • LinkedIn Growth & Personal Branding</footer></div>
 </body>
 </html>
